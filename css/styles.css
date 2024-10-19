@@ -1,0 +1,68 @@
+:root {
+  --color-primary-darkblue: #011c44;
+  --color-primary-blue: #2b7fff;
+  --color-primary-white: #ffffff;
+  --color-secondary-darkgreey: #4a4a4a;
+  --color-secondary-greey: #747272;
+}
+/* Global link */
+body {
+  color: var(--color-primary-darkblue);
+}
+
+ul {
+  list-style-type: none;
+}
+/* Ссылки шапка*/
+.link-header {
+  color: var(--color-primary-darkblue);
+}
+
+.link-header:hover {
+  color: var(--color-primary-blue);
+}
+/* Кнопки */
+.button {
+  color: var(--color-primary-white);
+  background-color: var(--color-primary-blue);
+  border: 2px solid var(--color-primary-blue);
+  border-radius: 32px;
+  cursor: pointer;
+}
+.button:hover {
+  color: var(--color-primary-darkblue);
+  background-color: transparent;
+}
+/* Main section */
+.main-title {
+  color: var(--color-primary-blue);
+}
+
+.main-p {
+  color: var(--color-secondary-darkgreey);
+}
+/* Advantages Section */
+.section-title .accent {
+  color: var(--color-primary-blue);
+}
+
+/* Ссылки footer*/
+.link-footer {
+  color: var(--color-primary-white);
+}
+
+.link-footer:hover {
+  color: var(--color-primary-blue);
+}
+/* address link */
+.address-link {
+  color: var(--color-primary-white);
+}
+
+.address-link:hover {
+  color: var(--color-primary-blue);
+}
+
+.address-copy {
+  color: var(--color-secondary-greey);
+}
