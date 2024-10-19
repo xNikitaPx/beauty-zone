@@ -1,3 +1,35 @@
+/* play-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/play-v19-latin-regular.woff2") format("woff2");
+}
+/* play-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/play-v19-latin-700.woff2") format("woff2");
+}
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v32-latin-regular.woff2") format("woff2");
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v32-latin-700.woff2") format("woff2");
+}
 :root {
   --color-primary-darkblue: #011c44;
   --color-primary-blue: #2b7fff;
@@ -8,6 +40,14 @@
 /* Global link */
 body {
   color: var(--color-primary-darkblue);
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+address {
+  font-style: normal;
 }
 
 ul {
@@ -16,14 +56,19 @@ ul {
 /* Ссылки шапка*/
 .link-header {
   color: var(--color-primary-darkblue);
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .link-header:hover {
   color: var(--color-primary-blue);
+  font-weight: 700;
 }
 /* Кнопки */
 .button {
   color: var(--color-primary-white);
+  font-weight: 700;
+  font-size: 18px;
   background-color: var(--color-primary-blue);
   border: 2px solid var(--color-primary-blue);
   border-radius: 32px;
@@ -33,22 +78,52 @@ ul {
   color: var(--color-primary-darkblue);
   background-color: transparent;
 }
+
+.button-p {
+  color: var(--color-secondary-darkgreey);
+  font-size: 12px;
+  line-height: 1.5;
+}
 /* Main section */
 .main-title {
   color: var(--color-primary-blue);
+  font-family: "Play", sans-serif;
+  font-size: 140px;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
-.main-p {
-  color: var(--color-secondary-darkgreey);
+.title-p {
+  font-size: 18px;
 }
 /* Advantages Section */
+.section-title {
+  font-family: "Play", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
 .section-title .accent {
   color: var(--color-primary-blue);
 }
 
+.section-title .beauty-zone {
+  text-transform: capitalize;
+}
+/* About Section */
+.about-text {
+  line-height: 1.7;
+}
+.about-text .beauty-zone {
+  font-weight: 700;
+}
 /* Ссылки footer*/
 .link-footer {
   color: var(--color-primary-white);
+  font-size: 16px;
+  line-height: 1.2;
+  text-decoration: none;
 }
 
 .link-footer:hover {
@@ -57,6 +132,9 @@ ul {
 /* address link */
 .address-link {
   color: var(--color-primary-white);
+  font-size: 16px;
+  line-height: 1.2;
+  text-decoration: none;
 }
 
 .address-link:hover {
@@ -65,4 +143,6 @@ ul {
 
 .address-copy {
   color: var(--color-secondary-greey);
+  font-size: 13px;
+  line-height: 1.2;
 }
