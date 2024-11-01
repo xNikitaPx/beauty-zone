@@ -38,9 +38,12 @@
   --color-secondary-darkgreey: #4a4a4a;
   --color-secondary-greey: #747272;
   --color-secondary-shadow: #a8c6f533;
+  --color-secondary-darkblue: #011f4a;
 }
 /* Global */
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -91,11 +94,21 @@ ul {
   margin: 0 auto;
   padding: 0 24px;
 }
+
+.visually-hidden {
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 /* Ссылки шапка*/
 .link-header {
   color: var(--color-primary-darkblue);
   text-decoration: none;
   font-size: 18px;
+  transition: color 0.2s;
 }
 
 .link-header:hover {
@@ -137,6 +150,15 @@ ul {
   text-align: center;
 }
 /* Header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px 0 32px 0;
+  backdrop-filter: blur(10px);
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -168,7 +190,7 @@ ul {
 
 /* Main section */
 .main-section {
-  padding-bottom: 126px;
+  padding: 122px 0 126px 0;
   background-image: linear-gradient(
       89.38deg,
       var(--color-primary-white) 30.62%,
@@ -178,7 +200,7 @@ ul {
     ),
     url(../images/main-section-background.jpg);
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: top center;
   background-size: contain;
 }
 
@@ -213,6 +235,7 @@ ul {
 }
 /* Advantages Section */
 .section-title {
+  margin-top: 40px;
   font-family: "Play", sans-serif;
   font-size: 64px;
   font-weight: 700;
@@ -232,7 +255,7 @@ ul {
 }
 /* About Section */
 .about-section {
-  padding-bottom: 176px;
+  padding-bottom: 350px;
 }
 
 .about-container {
@@ -257,9 +280,79 @@ ul {
   font-weight: 700;
 }
 
-.about-image {
+.about-image-container {
+  position: relative;
+  max-width: 499px;
+  width: 100%;
+  max-height: 695px;
+  height: 100%;
+}
+
+.about-image-one,
+.about-image-two {
+  position: absolute;
   border-radius: 50%;
   box-shadow: 0px 4px 4px 0px var(--color-secondary-shadow);
+}
+
+.about-image-one {
+  top: 0;
+  left: 0;
+}
+
+.about-image-two {
+  top: 368px;
+  right: 0;
+}
+
+.about-star {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+.about-star-1 {
+  position: absolute;
+  top: 336px;
+  left: 117px;
+  width: 64px;
+  height: 64px;
+  fill: var(--color-secondary-darkblue);
+}
+
+.about-star-2 {
+  position: absolute;
+  top: 32px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  fill: var(--color-primary-blue);
+}
+
+.about-star-3 {
+  position: absolute;
+  top: 270px;
+  right: 6px;
+  width: 16px;
+  height: 16px;
+  fill: var(--color-secondary-greey);
 }
 
 /* Choice section */
@@ -329,6 +422,10 @@ ul {
   border-radius: 4px 120px;
 }
 
+.procedures-items:hover {
+  transform: scale(1.05);
+}
+
 .procedures-text {
   color: var(--color-primary-white);
   text-align: center;
@@ -355,6 +452,10 @@ ul {
   cursor: pointer;
 }
 
+.carousel-button.next {
+  transform: rotate(180deg);
+}
+
 .carousel-arrow {
   width: 16px;
   height: 16px;
@@ -369,11 +470,54 @@ ul {
 .contact-title {
   margin-bottom: 48px;
 }
+
+.contact-container {
+  display: flex;
+  gap: 32px;
+}
+
+.contact-table {
+  max-width: 423px;
+  width: 100%;
+  max-height: 481px;
+  height: 100%;
+  padding: 48px 56px;
+  color: var(--color-primary-white);
+  background-color: var(--color-primary-darkblue);
+  background-image: url(../images/background-main-form.png);
+  border-radius: 32px;
+}
+
+.contact-table-title {
+  margin: 0 17px 32px;
+  font-weight: 600;
+  font-size: 22px;
+  align-items: center;
+}
+.contact-table-title .accent {
+  color: var(--color-primary-blue);
+}
+
+.contact-form-field {
+  margin-bottom: 16px;
+}
+
 /* Footer */
 .footer {
+  position: relative;
   background-color: var(--color-primary-darkblue);
-  background-image: url(../images/background.svg);
+  background-image: url(../images/background-footer.svg);
   padding: 56px 0;
+}
+
+.footer::after {
+  position: absolute;
+  background-image: url(../images/decor-drops.png);
+  width: 250px;
+  height: 150px;
+  content: "";
+  right: 0;
+  bottom: 0;
 }
 
 .footer-container {
@@ -416,6 +560,7 @@ ul {
   font-size: 16px;
   line-height: 1.2;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .link-footer:hover {
@@ -428,6 +573,7 @@ ul {
   font-size: 16px;
   line-height: 1.2;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .address-link:hover {
@@ -448,4 +594,93 @@ ul {
 
 .footer-icon:hover {
   fill: var(--color-primary-blue);
+}
+/* Modal */
+.backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  max-width: 723px;
+  width: 100%;
+  max-height: 681px;
+  height: 100%;
+  padding: 42px 144px;
+  color: var(--color-primary-white);
+  background-color: var(--color-primary-darkblue);
+  background-image: url(../images/background-modal.svg);
+  border-radius: 48px;
+  overflow-y: auto;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 42px;
+  right: 42px;
+}
+
+.modal-container {
+  padding: 0 62px;
+}
+/* Form */
+.form-field {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+}
+
+.form-input {
+  padding: 18px 33px;
+  width: 100%;
+  border: 2px solid var(--color-secondary-greey);
+  border-radius: 32px;
+  background-color: transparent;
+  color: var(--color-primary-white);
+  font-size: 13px;
+}
+
+.form-input:focus {
+  background-color: var(--color-secondary-greey);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-primary-white);
+  font-size: 13px;
+}
+
+.form-button {
+  margin: 0 auto 8px;
+  display: block;
+}
+
+.form-terms {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-secondary-greey);
+}
+
+.form-terms-link {
+  color: var(--color-secondary-greey);
+  text-underline-offset: 2px;
 }
