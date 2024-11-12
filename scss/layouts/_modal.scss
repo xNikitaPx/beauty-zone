@@ -44,7 +44,7 @@
   }
 
   @media screen and (max-width: $bp-mobile) {
-    padding: 20px 10px;
+    padding: 40px 20px;
   }
 
   &__btn-close {
@@ -66,8 +66,8 @@
     }
 
     @media screen and (max-width: $bp-tablet) {
-      top: 16px;
-      right: 16px;
+      top: 12px;
+      right: 12px;
     }
   }
 
@@ -85,7 +85,7 @@
     text-align: center;
 
     @media screen and (max-width: $bp-tablet) {
-      max-width: 280px;
+      max-width: 230px;
       margin-bottom: 24px;
       font-size: 32px;
     }
@@ -99,7 +99,7 @@
     }
 
     @media screen and (max-width: $bp-tablet) {
-      padding: 0 20px;
+      padding: 0;
     }
   }
 
@@ -112,7 +112,7 @@
     text-align: center;
 
     @media screen and (max-width: $bp-tablet) {
-      max-width: 240px;
+      max-width: 230px;
       margin: 0 auto 16px;
     }
   }
