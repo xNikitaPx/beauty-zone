@@ -1,0 +1,154 @@
+.about-section {
+  padding-bottom: 176px;
+  @media screen and (max-width: $bp-desktop) {
+    padding-bottom: 90px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    max-width: 709px;
+    margin-bottom: 160px;
+
+    @media screen and (max-width: $bp-desktop) {
+      margin-bottom: 88px;
+    }
+
+    @media screen and (max-width: $bp-tablet) {
+      max-width: 520px;
+      flex-grow: 1;
+    }
+  }
+
+  &__title {
+    margin: 40px 0;
+    max-width: 529px;
+
+    @media screen and (max-width: $bp-tablet) {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    line-height: 1.7;
+
+    @media screen and (max-width: $bp-tablet) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__images {
+    position: relative;
+    max-width: 499px;
+    width: 100%;
+    max-height: 695px;
+    height: 100%;
+
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__image-girl-one,
+  &__image-girl-two {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px 0px var(--color-secondary-shadow);
+
+    @media screen and (max-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__image-girl-one {
+    top: 0;
+    left: 0;
+  }
+
+  &__image-girl-two {
+    top: 368px;
+    right: 0;
+  }
+
+  &__star {
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(360deg);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.3);
+    }
+  }
+
+  &__star-1 {
+    position: absolute;
+    top: 336px;
+    left: 117px;
+    width: 64px;
+    height: 64px;
+    fill: var(--color-secondary-darkblue);
+
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
+
+    &--tablet {
+      display: none;
+
+      @media screen and (max-width: $bp-tablet) {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 40px;
+        height: 40px;
+        fill: var(--color-secondary-darkblue);
+      }
+    }
+  }
+
+  &__star-2 {
+    position: absolute;
+    top: 32px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    fill: var(--color-primary-blue);
+
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__star-3 {
+    position: absolute;
+    top: 270px;
+    right: 6px;
+    width: 16px;
+    height: 16px;
+    fill: var(--color-secondary-greey);
+
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+}

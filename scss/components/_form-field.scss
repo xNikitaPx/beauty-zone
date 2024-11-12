@@ -1,0 +1,25 @@
+.form-field {
+  &__label {
+    display: block;
+  }
+
+  &__input {
+    padding: 18px 33px;
+    width: 100%;
+    border: 2px solid var(--color-secondary-greey);
+    border-radius: 32px;
+    background-color: transparent;
+    color: var(--color-primary-white);
+    font-size: 13px;
+
+    &:focus {
+      background-color: var(--color-secondary-greey);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--color-primary-white);
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.footer {
+  position: relative;
+  background-color: var(--color-primary-darkblue);
+  background-image: url(../images/background-footer.svg);
+  padding: 56px 0;
+
+  &::after {
+    position: absolute;
+    background-image: url(../images/decor-drops.png);
+    width: 250px;
+    height: 150px;
+    content: "";
+    right: 0;
+    bottom: 0;
+
+    @media screen and (max-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: $bp-tablet) {
+      flex-direction: column;
+      text-align: center;
+      gap: 0;
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-grow: 1;
+    gap: 20px;
+
+    @media screen and (max-width: $bp-tablet) {
+      flex-direction: column;
+      text-align: center;
+      gap: 42px;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-grow: 1;
+    gap: 20px;
+  }
+
+  &__logo,
+  &__menu {
+    flex-grow: 1;
+  }
+
+  &__address-menu {
+    flex-grow: 1;
+
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__link {
+    margin-bottom: 16px;
+    color: var(--color-primary-white);
+    font-size: 16px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-primary-blue);
+    }
+  }
+
+  &__address-link {
+    margin-bottom: 16px;
+    color: var(--color-primary-white);
+    font-size: 16px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-primary-blue);
+    }
+  }
+
+  &__icon {
+    width: 42px;
+    height: 42px;
+    fill: var(--color-primary-white);
+
+    :hover {
+      fill: var(--color-primary-blue);
+    }
+  }
+
+  &__address-social {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__info {
+    flex-grow: 1;
+  }
+
+  &__info-social {
+    display: none;
+
+    @media screen and (max-width: $bp-tablet) {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__copy {
+    margin: 0;
+    color: var(--color-secondary-greey);
+    font-size: 13px;
+    line-height: 1.2;
+  }
+}

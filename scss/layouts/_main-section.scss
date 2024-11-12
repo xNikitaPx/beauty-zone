@@ -1,0 +1,109 @@
+.main-section {
+  padding: 110px 0 126px 0;
+  background-image: linear-gradient(
+      89.38deg,
+      var(--color-primary-white) 30.62%,
+      rgba(255, 255, 255, 0.850898) 41.31%,
+      rgba(255, 255, 255, 0.193204) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url(../images/main-section-background.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  @media screen and (max-width: $bp-desktop) {
+    padding: 100px 0 110px 0;
+  }
+
+  @media screen and (max-width: $bp-tablet) {
+    padding: 86px 0 90px 0;
+  }
+
+  @media screen and (max-width: $bp-mobile) {
+    padding: 72px 0 56px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 529px;
+    height: 100%;
+    padding: 0 106px;
+
+    @media screen and (max-width: $bp-tablet) {
+      margin: 0 auto;
+      max-width: 728px;
+      padding: 0;
+    }
+  }
+
+  &__title-text {
+    margin: 16px 0;
+
+    @media screen and (max-width: $bp-tablet) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: $bp-mobile) {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: var(--color-primary-blue);
+    font-family: "Play", sans-serif;
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 0.8;
+    text-transform: capitalize;
+
+    @media screen and (max-width: $bp-tablet) {
+      margin-bottom: 32px;
+      font-size: 54px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $bp-mobile) {
+      margin-bottom: 32px;
+      font-size: 46px;
+      text-align: center;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 238px;
+
+    @media screen and (max-width: $bp-tablet) {
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__button {
+    margin-bottom: 14px;
+
+    @media screen and (max-width: $bp-mobile) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--color-secondary-darkgreey);
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 11px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-primary-darkblue);
+  background-color: var(--color-primary-white);
+  background-image: url(../images/background.svg);
+  background-repeat: no-repeat;
+  background-size: 1240px;
+  background-position: center 1350px;
+  background-attachment: scroll;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+
+  @media screen and (max-width: $bp-desktop) {
+    background-position: center 1230px;
+  }
+
+  @media screen and (max-width: $bp-tablet) {
+    background-position: center 700px;
+    font-size: 18px;
+  }
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  display: inline-block;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,21 @@
+.button {
+  padding: 16px 32px;
+  color: var(--color-primary-white);
+  font-weight: 700;
+  font-size: 18px;
+  background-color: var(--color-primary-blue);
+  border: 2px solid var(--color-primary-blue);
+  border-radius: 32px;
+  cursor: pointer;
+
+  @media screen and (max-width: $bp-tablet) {
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  &:hover {
+    color: var(--color-primary-darkblue);
+    background-color: transparent;
+  }
+}

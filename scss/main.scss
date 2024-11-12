@@ -1,0 +1,25 @@
+@import "./utils/fonts";
+@import "./utils/variables";
+@import "./base";
+@import "./utils/text";
+@import "./utils/utils";
+
+@import "./components/advantage-card";
+@import "./components/button";
+@import "./components/carosel-button";
+@import "./components/form-field";
+@import "./components/pagination";
+@import "./components/procedures_card";
+
+@import "./layouts/section";
+@import "./layouts/about-section";
+@import "./layouts/choice-section";
+@import "./layouts/contact-section";
+@import "./layouts/container";
+@import "./layouts/footer";
+@import "./layouts/form-terms";
+@import "./layouts/header";
+@import "./layouts/main-section";
+@import "./layouts/mobile-menu";
+@import "./layouts/modal";
+@import "./layouts/procedures-section";
