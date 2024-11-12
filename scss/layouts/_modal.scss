@@ -44,7 +44,7 @@
   }
 
   @media screen and (max-width: $bp-mobile) {
-    padding: 140px 20px;
+    padding: 40px 20px;
   }
 
   &__btn-close {
@@ -65,7 +65,7 @@
       right: 20px;
     }
 
-    @media screen and (max-width: $bp-tablet) {
+    @media screen and (max-width: $bp-mobile) {
       top: 12px;
       right: 12px;
     }
