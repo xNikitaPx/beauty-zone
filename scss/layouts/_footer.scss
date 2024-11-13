@@ -16,6 +16,12 @@
     @media screen and (max-width: $bp-desktop) {
       display: none;
     }
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/decor-drops@2x.png);
+    }
   }
 
   &__container {
